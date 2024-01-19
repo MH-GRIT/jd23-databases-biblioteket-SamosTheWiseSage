@@ -62,7 +62,7 @@ public class Main {
 
     private static void UpdateProfile(Connection connection, Scanner scanner) throws SQLException {
         Statement statement = connection.createStatement();
-        System.out.println("If you want to update your username type 1. If you want to update your password type 2");
+        System.out.println("If you want to update your username type 1. If you want to update your password type 2 and if you want to update your email type 3");
         String valProfile = scanner.nextLine();
         if (valProfile.equals("1")) {
             System.out.println("please enter your new username first and then your old username");
@@ -72,7 +72,12 @@ public class Main {
             String oldprofile = scanner.nextLine();
             String updateprofile = "UPDATE UserLibrary SET username ='" + newProfile + "' WHERE username ='" + oldprofile + "'";
             int fixusername = statement.executeUpdate(updateprofile);
-            System.out.println("your new username is now " + newProfile);
+            if (fixusername > 0) {
+                System.out.println("your new username is now " + newProfile);
+            } else {
+                System.out.println("sorry thats incorrect press enter to try again");
+                String tryprofileagain = scanner.nextLine();
+            }
         } else if (valProfile.equals("2")) {
             System.out.println("please enter your new password");
             String newPassword = scanner.nextLine();
@@ -80,10 +85,26 @@ public class Main {
             String oldPassword = scanner.nextLine();
             String updateprofile2 = "Update UserLibrary SET password ='" + newPassword + "' where password ='" + oldPassword + "'";
             int fixpassword = statement.executeUpdate(updateprofile2);
-            System.out.println("your new password is now " + newPassword);
-        } else {
-            System.out.println("sorry thats incorrect press enter to try again");
-            String tryprofileagain = scanner.nextLine();
+            if (fixpassword > 0) {
+                System.out.println("your new password is now " + newPassword);
+            } else {
+                System.out.println("sorry thats incorrect press enter to try again");
+                String tryprofileagain = scanner.nextLine();
+            }
+        } else if (valProfile.equals("3")) {
+            System.out.println("pleaser type your new email and then your old one. \nNOTE! please write your whole email not just the text before @. this is to make sure your a real user and not a bot");
+            System.out.println("new email:");
+            String newemail = scanner.nextLine();
+            System.out.println("old email:");
+            String oldemail = scanner.nextLine();
+            String updateEmail = "Update UserLibrary SET email ='" +newemail+"@gmail.com' where email ='"+oldemail+"@gmail.com'";
+            int fixemail = statement.executeUpdate(updateEmail);
+            if (fixemail > 0){
+                System.out.println("your new email is now "+newemail);
+            }else {
+                System.out.println("sorry thats incorrect press enter to try again");
+                String tryprofileagain = scanner.nextLine();
+            }
         }
 
     }
