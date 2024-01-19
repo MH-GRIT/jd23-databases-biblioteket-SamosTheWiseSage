@@ -284,6 +284,7 @@ public class Main {
        }
 
     }
+    // En kommentar
     private static void LoginUser(Connection connection, Scanner scanner){
         System.out.print("username:");
         username = scanner.nextLine();
