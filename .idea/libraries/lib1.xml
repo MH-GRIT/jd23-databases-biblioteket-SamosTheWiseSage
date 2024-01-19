@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="lib1">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../sqltry/lib" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../sqltry/lib/src/build/java" />
+      <root url="file://$PROJECT_DIR$/../sqltry/lib/src/demo/java" />
+      <root url="file://$PROJECT_DIR$/../sqltry/lib/src/generated/java" />
+      <root url="file://$PROJECT_DIR$/../sqltry/lib/src/legacy/java" />
+      <root url="file://$PROJECT_DIR$/../sqltry/lib/src/main/core-api/java" />
+      <root url="file://$PROJECT_DIR$/../sqltry/lib/src/main/core-impl/java" />
+      <root url="file://$PROJECT_DIR$/../sqltry/lib/src/main/protocol-impl/java" />
+      <root url="file://$PROJECT_DIR$/../sqltry/lib/src/main/user-api/java" />
+      <root url="file://$PROJECT_DIR$/../sqltry/lib/src/main/user-impl/java" />
+      <root url="file://$PROJECT_DIR$/../sqltry/lib/src/test/java" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/../sqltry/lib" recursive="false" />
+  </library>
+</component>
